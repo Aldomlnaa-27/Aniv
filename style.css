@@ -1,0 +1,516 @@
+/* Reset CSS Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff6b81;
+  --secondary-color: #ff85a2;
+  --dark-color: #333333;
+  --light-bg: #fff5f7;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark-color);
+  background-color: #ffffff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Floating Hearts Background */
+.heart-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99;
+  overflow: hidden;
+}
+
+.heart-item {
+  position: absolute;
+  bottom: -50px;
+  animation: floatUp linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Music Player Floating Button */
+.music-player {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 18px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.music-player:hover {
+  transform: scale(1.05);
+}
+
+.disc {
+  font-size: 1.5rem;
+}
+
+.disc.playing {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.music-text strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--dark-color);
+}
+
+.music-text small {
+  font-size: 0.75rem;
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /* GANTI BANNER UTAMA DI BAWAH INI */
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+              url('foto1.jpeg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 1100px;
+}
+
+.anniv-tag {
+  background-color: rgba(255, 107, 129, 0.85);
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.heart-pulse {
+  display: inline-block;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Timer / Counter */
+.counter-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 25px 0;
+}
+
+.counter-box h3 {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.time-item {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 10px 15px;
+  border-radius: 10px;
+  min-width: 70px;
+}
+
+.time-item span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.time-item label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.scroll-down {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  display: inline-block;
+  margin-top: 15px;
+  transition: opacity 0.3s;
+}
+
+.scroll-down:hover {
+  opacity: 1;
+}
+
+/* Global Sections Layout */
+.section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+/* TIMELINE FLEXBOX */
+.timeline {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+
+.timeline-item {
+  display: flex;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Kotak Sisi Kiri */
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+.timeline-item.left .timeline-content {
+  width: 50%;
+  text-align: right;
+}
+
+/* Kotak Sisi Kanan */
+.timeline-item.right {
+  justify-content: flex-end;
+}
+
+.timeline-item.right .timeline-content {
+  width: 50%;
+  text-align: left;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  border: 1px solid #ffe1e8;
+  box-sizing: border-box;
+  z-index: 2; /* Agar berada di atas garis */
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ff6b81;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.timeline-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  font-size: 0.88rem;
+  color: #666;
+}
+
+/* Responsif khusus HP */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+    transform: none;
+  }
+  .timeline-item.left,
+  .timeline-item.right {
+    justify-content: flex-start;
+  }
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    width: calc(100% - 45px);
+    margin-left: 45px;
+    text-align: left;
+  }
+}
+
+/* Reasons Flip Cards */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.flip-card {
+  background-color: transparent;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  border-radius: 12px;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.flip-card-front {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 2px solid #ffe1e8;
+}
+
+.flip-card-front .icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.flip-card-back {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: rotateY(180deg);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  height: 250px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: var(--white);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Love Letter Section */
+.envelope-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.envelope {
+  background: var(--white);
+  border: 2px dashed var(--primary-color);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 107, 129, 0.15);
+  transition: all 0.3s ease;
+}
+
+.envelope-text {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.letter {
+  display: none;
+  text-align: left;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ffe1e8;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.envelope.open .letter {
+  display: block;
+}
+
+.envelope.open .envelope-text {
+  display: none;
+}
+
+.letter h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.letter p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.letter .signature {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  margin-top: 20px;
+  color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+}
+
+/* Responsif Layar HP */
+@media (max-width: 768px) {
+  }
+  .timer {
+    gap: 8px;
+  }
+  .time-item {
+    min-width: 55px;
+    padding: 8px;
+  }
+  .time-item span {
+    font-size: 1.3rem;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 15px;
+  }
+  .timeline-item.right {
+    left: 0;
+  }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Anniversary, My Love! ❤️</title>
+  
+  <!-- Font Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- CSS Terpisah -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Heart Container -->
+  <div class="heart-bg" id="heartBg"></div>
+
+  <!-- Music Player -->
+  <div class="music-player" id="musicBtn" title="Putar Musik">
+    <div class="disc" id="disc">🎵</div>
+    <div class="music-text">
+      <strong>Lagu Kita</strong>
+      <small id="musicStatus">Klik untuk memutar</small>
+    </div>
+  </div>
+  <audio id="bgMusic" loop src="lagu.AAC"></audio>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="anniv-tag">HAPPY ANNIVERSARY</div>
+      <p style="font-size: 1.2rem; font-weight: 300; margin-bottom: 25px;">
+        Setiap detik bersamamu adalah petualangan terindah.
+      </p>
+
+      <!-- Counter -->
+      <div class="counter-box">
+        <h3>Kita Sudah Bersama Selama:</h3>
+        <div class="timer">
+          <div class="time-item"><span id="days">0</span><label>Hari</label></div>
+          <div class="time-item"><span id="hours">0</span><label>Jam</label></div>
+          <div class="time-item"><span id="minutes">0</span><label>Menit</label></div>
+          <div class="time-item"><span id="seconds">0</span><label>Detik</label></div>
+        </div>
+      </div>
+
+      <a href="#story" class="scroll-down"></a>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="story" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Perjalanan Cinta Kita</h2>
+        <p>Kilas balik momen-momen indah yang kita lewati bersama</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="timeline-date">Awal Pertemuan</span>
+            <img src="kedua.jpeg" alt="Awal Bertemu" class="timeline-img">
+            <h3>Ajakan Foto bersama</h3>
+            <p>Hari dimana tatapan pertama kita bertemu dan rasa canggung yang manis berubah jadi awal dari segalanya.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <span class="timeline-date">Setelah Pernyataan</span>
+            <img src="pertama.jpeg" alt="Awal Bertemu" class="timeline-img">
+            <h3>Perasaan</h3>
+            <p>Setelah pernyataan yang tidak seperti pernyataan yang benar-benar serius</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="timeline-date">Awal Perjalanan</span>
+            <img src="ketiga.jpeg" alt="Liburan Bareng" class="timeline-img">
+            <h3>Graduation of us</h3>
+            <p>Awal dari kebahagiaan yang akan kita lewati bersama.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <span class="timeline-date">Sesuatu Tak Terduga</span>
+            <img src="kelima.jpeg" alt="Awal Bertemu" class="timeline-img">
+            <h3>MyGraduation</h3>
+            <p>Pada hari dimana aku fikir tidak ada yang special pada kelulusanku, dan surprise seseorang yang sangat special muncul.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="timeline-date">Hal Terencana</span>
+            <img src="keenam.jpeg" alt="Liburan Bareng" class="timeline-img">
+            <h3>YourGraduation</h3>
+            <p>Hari dimana ku pikir tidak akan sesuai dengan rencana yang sudah ku buat, namun pada akhirnya dan syukurnya semua berjalan sesuai rencana untuk memberikan sesuatu yang berharga.</p>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </section>
+
+  <!-- Reasons Section -->
+  <section class="section" style="background-color: #fff9fb;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Alasan Aku Mencintaimu</h2>
+        <p>Klik/sentuh kartu di bawah ini untuk melihat jawabannya!</p>
+      </div>
+
+      <div class="reasons-grid">
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="icon"></span>
+              <h3>Senyumanmu</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Senyumanmu selalu berhasil mencairkan hariku yang paling lelah sekalipun.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="icon"></span>
+              <h3>Kesabaranmu</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Caramu mendengarkan dan selalu ada untukku tanpa pernah memegang rasa menghakimi.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="icon"></span>
+              <h3>Ketulusanmu</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Kamu mencintaiku dengan segalanya, membuatku merasa menjadi orang paling beruntung.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Galeri Momen Indah</h2>
+        <p>Kumpulan foto tawa dan kebahagiaan kita</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <!-- GANTI GAMBAR DI BAWAH INI -->
+          <img src="ketujuh.jpeg" alt="Gallery 1">
+          <div class="gallery-caption">Foto Studio Pertama</div>
+        </div>
+        <div class="gallery-item">
+          <!-- GANTI GAMBAR DI BAWAH INI -->
+          <img src="kedelapan.jpeg" alt="Gallery 2">
+          <div class="gallery-caption">Kencan perayaan pertama</div>
+        </div>
+        <div class="gallery-item">
+          <!-- GANTI GAMBAR DI BAWAH INI -->
+          <img src="kesembilan.jpeg" alt="Gallery 3">
+          <div class="gallery-caption">Foto Konyol Tapi Manis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <!-- GANTI GAMBAR DI BAWAH INI -->
+          <img src="kesepuluh.jpeg" alt="Gallery 1">
+          <div class="gallery-caption">Hal yang tak terfikirkan </div>
+        </div>
+        <div class="gallery-item">
+          <!-- GANTI GAMBAR DI BAWAH INI -->
+          <img src="sebelas.jpeg" alt="Gallery 2">
+          <div class="gallery-caption">Seseorang yang tak tahu malu</div>
+        </div>
+        <div class="gallery-item">
+          <!-- GANTI GAMBAR DI BAWAH INI -->
+          <img src="duabelas.jpeg" alt="Gallery 3">
+          <div class="gallery-caption">Kencan Santai Sore Hari</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Love Letter Section -->
+  <section class="section" style="background: #fff0f3;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Surat Cinta Untukmu</h2>
+        <p>Klik amplop di bawah ini untuk membuka pesan khusus</p>
+      </div>
+
+      <div class="envelope-wrapper">
+        <div class="envelope" id="envelope" onclick="this.classList.toggle('open')">
+          <div class="envelope-text"> Klik Untuk Membuka Surat</div>
+          <div class="letter">
+            <h3>Pesan Khusus Dari Hatiku,</h3>
+            <p>
+              Terima kasih telah bertahan dan berjalan sejauh ini bersamaku. Setiap hari yang kita lewati memberi warna baru dalam hidupku. 
+            </p>
+            <p>
+              Aku bersyukur untuk setiap tawa, cerita, bahkan pertengkaran kecil yang membuat kita makin dewasa dan saling mengerti. Semoga perjalanan kita terus penuh cinta dan kebahagiaan.
+            </p>
+            <p class="signature">Dengan Seluruh Cintaku,<br><strong>Al</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Dibuat Spesial Untuk Merayakan Hari Jadian Kita</p>
+    <p style="margin-top: 5px; opacity: 0.8; font-size: 0.85rem;">I Love You Yesterday, I Love You Still, Always Have, Always Will.</p>
+  </footer>
+
+  <!-- JavaScript Interaktif -->
+  <script>
+    // 1. TANGGAL JADIAN (Tahun, Bulan [0-11], Tanggal, Jam, Menit, Detik)
+    // Catatan: Bulan Januari = 0, Februari = 1, dst.
+    const anniversaryDate = new Date(2019, 10, 27, 0, 0, 0); // Contoh: 14 Februari 2023
+
+    function updateTimer() {
+      const now = new Date();
+      const diff = now - anniversaryDate;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer();
+
+    // 2. Music Player Toggle
+    const musicBtn = document.getElementById('musicBtn');
+    const bgMusic = document.getElementById('bgMusic');
+    const disc = document.getElementById('disc');
+    const musicStatus = document.getElementById('musicStatus');
+    let isPlaying = false;
+
+    musicBtn.addEventListener('click', () => {
+      if (!isPlaying) {
+        bgMusic.play();
+        disc.classList.add('playing');
+        musicStatus.innerText = 'Diputar ♪';
+        isPlaying = true;
+      } else {
+        bgMusic.pause();
+        disc.classList.remove('playing');
+        musicStatus.innerText = 'Klik untuk memutar';
+        isPlaying = false;
+      }
+    });
+
+    // 3. Floating Hearts Animation
+    const heartBg = document.getElementById('heartBg');
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart-item');
+      heart.innerHTML = ['❤️', '💖', '🌸', '✨'][Math.floor(Math.random() * 4)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+      heart.style.fontSize = Math.random() * 15 + 15 + 'px';
+      heartBg.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
